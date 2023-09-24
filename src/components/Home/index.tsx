@@ -1,9 +1,11 @@
-import { signIn, signOut } from "next-auth/react";
-import Button from "../common/Button";
-import { useFetchSession } from "@/hooks/useSession";
-import styles from "./index.module.scss";
 import TopBar from "../TopBar";
+import UploadFiles from "../UploadFiles";
 
 export default function HomeComponent() {
-  return <TopBar />;
+  return (
+    <>
+      <TopBar />
+      <UploadFiles />
+    </>
+  );
 }

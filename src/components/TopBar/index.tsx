@@ -6,15 +6,18 @@ import styles from "./index.module.scss";
 export default function TopBar() {
   const { session } = useFetchSession();
   return (
-    <div className={styles.authBtn}>
+    <div className={"absolute right-[20px] top-[20px]"}>
       {session ? (
-        <>
+        <div className="flex items-center">
+          <h1 className="pr-[20px] text-[16px] font-extrabold tracking-tight text-white">
+            Welcome {session?.user.name}
+          </h1>
           <img
             onClick={() => signOut()}
-            className={styles.profileImg}
+            className={"h-[40px] w-[40px] rounded-full"}
             src={session?.user.image as string}
           />
-        </>
+        </div>
       ) : (
         <Button
           onClick={() => signIn()}
