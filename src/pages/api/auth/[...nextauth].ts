@@ -1,27 +1,12 @@
-import NextAuth from "next-auth";
-import GithubProvider from "next-auth";
-import { Provider } from "next-auth/providers";
-
-import {
-  getServerSession,
-  type DefaultSession,
-  type NextAuthOptions,
-} from "next-auth";
-
-interface GithubProviderOptions {
-  clientId: string;
-  clientSecret: string;
-  // Додайте інші властивості, які вимагає GithubProvider
-}
-
-export const authOptions: NextAuthOptions = {
+import NextAuth, { AuthOptions } from "next-auth";
+import GithubProvider from "next-auth/providers/github";
+export const authOptions: AuthOptions = {
   // Configure one or more authentication providers
   providers: [
-    GithubProvider(<GithubProviderOptions>{
-      clientId: process.env.GITHUB_ID,
-      clientSecret: process.env.GITHUB_SECRET,
+    GithubProvider({
+      clientId: String(process.env.GITHUB_ID),
+      clientSecret: String(process.env.GITHUB_SECRET),
     }),
-    // ...add more providers here
   ],
 };
 
