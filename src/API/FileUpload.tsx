@@ -11,14 +11,7 @@ export const fileUpload = (file: any) => {
     (snapshot) => {
       const progress =
         Math.round(snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-      console.log(
-        "🚀 ~ file: FileUpload.tsx:14 ~ fileUpload ~ snapshot.totalBytes:",
-        snapshot.totalBytes,
-      );
-      console.log(
-        "🚀 ~ file: FileUpload.tsx:14 ~ fileUpload ~ snapshot.bytesTransferred:",
-        snapshot.bytesTransferred,
-      );
+
       // console.log("progress", progress);
     },
     (error) => {
