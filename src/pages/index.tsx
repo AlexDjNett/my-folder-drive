@@ -1,4 +1,4 @@
-import Button from "@/components/common/Button";
+import Button from "@/components/common/ButtonDefault";
 import Head from "next/head";
 import Link from "next/link";
 import HomeComponent from "@/components/Home";

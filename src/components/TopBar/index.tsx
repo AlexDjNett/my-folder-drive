@@ -1,5 +1,5 @@
 import { signIn, signOut } from "next-auth/react";
-import Button from "../common/Button";
+import Button from "../common/ButtonDefault";
 import { useFetchSession } from "@/hooks/useSession";
 import styles from "./index.module.scss";
 

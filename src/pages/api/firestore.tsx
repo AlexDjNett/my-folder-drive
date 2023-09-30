@@ -1,4 +1,4 @@
-import { storage, app, database } from "@/firebaseConfig";
+import { storage, app, db } from "@/firebaseConfig";
 import type { NextApiRequest, NextApiResponse } from "next";
 
 const firestore = (req: NextApiRequest, res: NextApiResponse) => {
